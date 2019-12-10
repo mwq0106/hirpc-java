@@ -1,0 +1,2 @@
+# hirpc-java
+基于ProtoBuf的跨语言服务治理RPC框架，相当于跨语言的dubbo
