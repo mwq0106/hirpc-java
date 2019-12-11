@@ -3,14 +3,4 @@
 *.iml
 out
 gen
-client/target/generated-sources/
-common/target/generated-sources/
-registry/target/generated-sources/
-server/src/main/java/com/hirpc/configuration/
-server/target/generated-sources/
-test/api/target/generated-sources/
-test/consumer/target/generated-sources/
-test/consumer/target/generated-test-sources/
-test/provider/target/generated-sources/
-test/provider/target/generated-test-sources/
-test/api/target/
+*/target/*
