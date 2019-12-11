@@ -4,7 +4,10 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b257e17-2ec5-4f52-90e3-849bac77bb2e" name="Default Changelist" comment="" />
+    <list default="true" id="3b257e17-2ec5-4f52-90e3-849bac77bb2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/registry/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
@@ -27,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/common/src/main/java/com/hirpc/protocol/codec/RpcDecoder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3728">
-              <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+              <caret line="163" selection-start-line="163" selection-end-line="163" />
               <folding>
                 <element signature="e#2100#2768#1" />
               </folding>
@@ -39,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/test/consumer/src/main/java/com/hirpc/HiRpcClientApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="455">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#291#292#0" expanded="true" />
                 <element signature="e#363#364#0" expanded="true" />
@@ -51,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/consumer/src/main/java/com/hirpc/controller/DemoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+            <state relative-caret-position="280">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/test/consumer/src/test/java/com/hirpc/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -88,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/test/api/src/main/java/com/hirpc/service/DemoService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -143,10 +146,12 @@
       <replace>.debug</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/src/main/java/com/hirpc/protocol/util/PackageUtil.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/hirpc/protocol/PbEntityManager.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/com/hirpc/handler/RpcClientHandler.java" />
         <option value="$PROJECT_DIR$/client/src/main/java/com/hirpc/balancer/Balancer.java" />
@@ -193,10 +198,11 @@
         <option value="$PROJECT_DIR$/test/api/src/main/java/com/hirpc/entity/User.java" />
         <option value="$PROJECT_DIR$/test/consumer/src/main/java/com/hirpc/HiRpcClientApplication.java" />
         <option value="$PROJECT_DIR$/test/consumer/pom.xml" />
-        <option value="$PROJECT_DIR$/test/consumer/src/main/java/com/hirpc/controller/DemoController.java" />
         <option value="$PROJECT_DIR$/test/consumer/src/test/java/com/hirpc/AppTest.java" />
         <option value="$PROJECT_DIR$/test/provider/pom.xml" />
         <option value="$PROJECT_DIR$/test/api/pom.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/test/consumer/src/main/java/com/hirpc/controller/DemoController.java" />
       </list>
     </option>
   </component>
@@ -250,6 +256,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -490,7 +497,7 @@
     <property name="ToolWindowDebug.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575984987657" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575985794461" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xxl-rpc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -662,8 +669,16 @@
       <workItem from="1575714467516" duration="291000" />
       <workItem from="1575861205466" duration="15547000" />
       <workItem from="1575945703017" duration="15249000" />
-      <workItem from="1575971743005" duration="2906000" />
+      <workItem from="1575971743005" duration="3679000" />
     </task>
+    <task id="LOCAL-00001" summary="更新readme">
+      <created>1575985731771</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575985731771</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -699,7 +714,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270405000" />
+    <option name="totallyTimeSpent" value="271178000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -711,8 +726,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="1" />
@@ -721,7 +735,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" weight="0.22319035" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.22319035" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.4540311" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4639321" />
@@ -734,7 +748,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.48090523" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Tail" order="15" />
@@ -755,8 +769,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新readme" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/com/hirpc/HiRpcServerApplication2.java" />
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/hirpc/protocol/util/Bytes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
@@ -1047,7 +1064,7 @@
     <entry file="file://$PROJECT_DIR$/test/consumer/src/main/java/com/hirpc/HiRpcClientApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#291#292#0" expanded="true" />
             <element signature="e#363#364#0" expanded="true" />
@@ -1058,7 +1075,7 @@
     <entry file="file://$PROJECT_DIR$/test/consumer/src/test/java/com/hirpc/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1078,24 +1095,34 @@
     <entry file="file://$PROJECT_DIR$/test/api/src/main/java/com/hirpc/service/DemoService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/hirpc/protocol/codec/RpcDecoder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3728">
-          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+          <caret line="163" selection-start-line="163" selection-end-line="163" />
           <folding>
             <element signature="e#2100#2768#1" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="35">
+            <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/consumer/src/main/java/com/hirpc/controller/DemoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="21" column="39" lean-forward="true" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        <state relative-caret-position="280">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
