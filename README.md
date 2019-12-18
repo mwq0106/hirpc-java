@@ -69,5 +69,7 @@ public class DemoController {
 }
 ```
 4.运行zookeeper环境
-5.启动consumer与provider模块
+
+5.运行consumer与provider模块
+
 6.本地访问http://localhost:8082/sayHello?name=aa
