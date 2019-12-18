@@ -27,7 +27,9 @@ hirpc是一个跨语言的服务治理rpc框架，hirpc-java是其java版本，�
 - TCP长连接及心跳机制
 # 使用
 - 在sample模块中已经给出使用示例，本地只需运行zookeeper，然后运行consumer与provider模块即可跑起本项目
-- 1.在api中定义一个接口
+- 开发的基本流程：
+
+1.在api中定义一个接口
 ```java
 public interface DemoService {
     Test2.Person hello(Test2.Person person1, Test2.Person person2);
