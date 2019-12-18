@@ -7,7 +7,7 @@ hirpc是一个跨语言的服务治理rpc框架，hirpc-java是其java版本，�
 # 总体流程
 ![image](https://github.com/mwq0106/hirpc-java/blob/master/assert/QQ%E6%88%AA%E5%9B%BE20191218202933.png)
 # 特性
-- 跨语言的rpc，基于ProtoBuf实现，底层协议对跨语言提供了支持，
+- 支持跨语言的rpc，基于ProtoBuf实现，底层协议对跨语言提供了支持，
 在进行跨语言rpc时只需编写方法参数对应的.proto文件，并且编译成对应语言的实体类即可进行rpc调用，
 而不需要像grpc一样还需安装对应语言的插件然后再通过插件进行编译，同时编写.proto文件的方式也更简单。
 相比grpc，此种方式更加的简单易懂，学习成本也更低。
