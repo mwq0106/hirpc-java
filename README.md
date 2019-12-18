@@ -25,4 +25,47 @@ hirpc是一个跨语言的服务治理rpc框架，hirpc-java是其java版本，�
 - 自定义rpc协议，能实现跨语言的rpc，除了使用了ProtoBuf提供支持，还有另外一个关键因素就是自定义传输层的rpc协议，
 协议的设计充分考虑到了跨语言的需求以及未来的拓展，随着未来的发展协议可能还会作出相应变化
 - TCP长连接及心跳机制
+# 使用
+- 在sample模块中已经给出使用示例，本地只需运行zookeeper，然后运行consumer与provider模块即可跑起本项目
+- 1.在api中定义一个接口
+```java
+public interface DemoService {
+    Test2.Person hello(Test2.Person person1, Test2.Person person2);
+    String hello2(String name);
+}
+```
+2.在provider中实现该接口并且加上注解@RpcService
+```java
+@RpcService
+public class DemoServiceImpl implements DemoService{
+    @Override
+    public Test2.Person hello(Test2.Person person1,Test2.Person person2){
+        return "hi" + xxx1 + xxx2;
+    }
+    @Override
+    public String hello2(String name){
+        return "hi," + name;
+    }
+}
+```
+3.在consumer中使用注解@RpcReference即可完成依赖注入及服务引用
+```java
+@RestController
+public class DemoController {
+    @RpcReference
+    private DemoService demoService;
 
+    @RequestMapping("/sayHello")
+    public String sayHello(@RequestParam String name) {
+        Test2.Person person = demoService.hello(xx,xxx);
+        return person.getName();
+    }
+    @RequestMapping("/sayHello2")
+    public String sayHello2(@RequestParam String name) {
+        return demoService.hello2(name);
+    }
+}
+```
+4.运行zookeeper环境
+5.启动consumer与provider模块
+6.本地访问http://localhost:8082/sayHello?name=aa
