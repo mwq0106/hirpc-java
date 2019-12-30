@@ -48,7 +48,7 @@
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>4.1.42.Final</version>
+            <version>4.1.44.Final</version>
         </dependency>
         <dependency>
             <groupId>com.esotericsoftware</groupId>
@@ -88,7 +88,7 @@
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
-                <version>4.1.42.Final</version>
+                <version>4.1.44.Final</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
