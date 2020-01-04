@@ -1,0 +1,14 @@
+syntax = "proto2";
+option java_package="com.hirpc.protocol.protobuf";
+option java_outer_classname="RequestPb";
+package com.hirpc.entity;
+message RequestInner {
+  required string hirpcVersion = 1;
+  required string servicePath = 2;
+  required string serviceName = 3;
+  optional string serviceVersion = 4;
+
+  map<string, string> header = 5;
+  required string parameterType = 6;
+  optional string data = 7;  
+}

@@ -1,0 +1,8 @@
+syntax = "proto2";
+option java_package="com.hirpc.protocol.protobuf";
+option java_outer_classname="ResponsePb";
+package com.hirpc.entity;
+message ResponseInner {
+  optional string error = 1;
+  required string returnType = 2;
+}
