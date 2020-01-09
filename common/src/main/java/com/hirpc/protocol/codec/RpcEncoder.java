@@ -100,7 +100,7 @@ public class RpcEncoder extends MessageToByteEncoder {
 
                 String[] fullNames = getPbDescriptorFullName(request);
                 for (int i = 0; i < fullNames.length; i++) {
-                    builder.addParameterTypes(fullNames[i]);
+                    builder.addParameterType(fullNames[i]);
                 }
 
                 builder.setServiceName(request.getServiceName());
@@ -216,7 +216,7 @@ public class RpcEncoder extends MessageToByteEncoder {
     public static void main(String[] args) throws Exception
     {
         RequestPb.RequestInner.Builder builder=RequestPb.RequestInner.newBuilder();
-        builder.addParameterTypes("a");
+        builder.addParameterType("a");
         builder.setHirpcVersion("");
         builder.setServicePath("");
         builder.setServiceName("");

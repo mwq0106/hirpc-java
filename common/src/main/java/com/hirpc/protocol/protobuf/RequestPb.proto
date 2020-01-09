@@ -9,6 +9,6 @@ message RequestInner {
   optional string serviceVersion = 4;
 
   map<string, string> header = 5;
-  required string parameterType = 6;
+  repeated string parameterType = 6;
   optional string data = 7;  
 }

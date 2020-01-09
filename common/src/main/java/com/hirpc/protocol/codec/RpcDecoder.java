@@ -123,13 +123,13 @@ public class RpcDecoder extends ByteToMessageDecoder {
                 request.setId(requestId);
                 request.setServiceVersion(requestInner.getServiceVersion());
 
-                int parameterTypesCount = requestInner.getParameterTypesCount();
+                int parameterTypesCount = requestInner.getParameterTypeCount();
                 Class[] parameterType = new Class[parameterTypesCount];
                 Object[] parameterValue = new Object[parameterTypesCount];
                 for (int i = 0; i < parameterTypesCount; i++) {
-                    Class pbClass = pbEntityManager.getProtobufEntity(requestInner.getParameterTypes(i));
+                    Class pbClass = pbEntityManager.getProtobufEntity(requestInner.getParameterType(i));
                     if(pbClass == null){
-                        throw new RuntimeException("服务端没有所传的ProtoBuf参数类型:" + requestInner.getParameterTypes(i));
+                        throw new RuntimeException("服务端没有所传的ProtoBuf参数类型:" + requestInner.getParameterType(i));
                     }
                     parameterType[i] = pbClass;
                     int parameterByteLength = byteBuf.readInt();

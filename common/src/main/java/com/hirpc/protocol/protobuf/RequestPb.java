@@ -20,68 +20,56 @@ public final class RequestPb {
 
     /**
      * <code>required string hirpcVersion = 1;</code>
-     * @return Whether the hirpcVersion field is set.
      */
     boolean hasHirpcVersion();
     /**
      * <code>required string hirpcVersion = 1;</code>
-     * @return The hirpcVersion.
      */
     String getHirpcVersion();
     /**
      * <code>required string hirpcVersion = 1;</code>
-     * @return The bytes for hirpcVersion.
      */
     com.google.protobuf.ByteString
         getHirpcVersionBytes();
 
     /**
      * <code>required string servicePath = 2;</code>
-     * @return Whether the servicePath field is set.
      */
     boolean hasServicePath();
     /**
      * <code>required string servicePath = 2;</code>
-     * @return The servicePath.
      */
     String getServicePath();
     /**
      * <code>required string servicePath = 2;</code>
-     * @return The bytes for servicePath.
      */
     com.google.protobuf.ByteString
         getServicePathBytes();
 
     /**
      * <code>required string serviceName = 3;</code>
-     * @return Whether the serviceName field is set.
      */
     boolean hasServiceName();
     /**
      * <code>required string serviceName = 3;</code>
-     * @return The serviceName.
      */
     String getServiceName();
     /**
      * <code>required string serviceName = 3;</code>
-     * @return The bytes for serviceName.
      */
     com.google.protobuf.ByteString
         getServiceNameBytes();
 
     /**
      * <code>optional string serviceVersion = 4;</code>
-     * @return Whether the serviceVersion field is set.
      */
     boolean hasServiceVersion();
     /**
      * <code>optional string serviceVersion = 4;</code>
-     * @return The serviceVersion.
      */
     String getServiceVersion();
     /**
      * <code>optional string serviceVersion = 4;</code>
-     * @return The bytes for serviceVersion.
      */
     com.google.protobuf.ByteString
         getServiceVersionBytes();
@@ -121,43 +109,34 @@ public final class RequestPb {
             String key);
 
     /**
-     * <code>repeated string parameterTypes = 6;</code>
-     * @return A list containing the parameterTypes.
+     * <code>repeated string parameterType = 6;</code>
      */
     java.util.List<String>
-        getParameterTypesList();
+        getParameterTypeList();
     /**
-     * <code>repeated string parameterTypes = 6;</code>
-     * @return The count of parameterTypes.
+     * <code>repeated string parameterType = 6;</code>
      */
-    int getParameterTypesCount();
+    int getParameterTypeCount();
     /**
-     * <code>repeated string parameterTypes = 6;</code>
-     * @param index The index of the element to return.
-     * @return The parameterTypes at the given index.
+     * <code>repeated string parameterType = 6;</code>
      */
-    String getParameterTypes(int index);
+    String getParameterType(int index);
     /**
-     * <code>repeated string parameterTypes = 6;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the parameterTypes at the given index.
+     * <code>repeated string parameterType = 6;</code>
      */
     com.google.protobuf.ByteString
-        getParameterTypesBytes(int index);
+        getParameterTypeBytes(int index);
 
     /**
      * <code>optional string data = 7;</code>
-     * @return Whether the data field is set.
      */
     boolean hasData();
     /**
      * <code>optional string data = 7;</code>
-     * @return The data.
      */
     String getData();
     /**
      * <code>optional string data = 7;</code>
-     * @return The bytes for data.
      */
     com.google.protobuf.ByteString
         getDataBytes();
@@ -179,7 +158,7 @@ public final class RequestPb {
       servicePath_ = "";
       serviceName_ = "";
       serviceVersion_ = "";
-      parameterTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      parameterType_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       data_ = "";
     }
 
@@ -254,10 +233,10 @@ public final class RequestPb {
             case 50: {
               com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-                parameterTypes_ = new com.google.protobuf.LazyStringArrayList();
+                parameterType_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000020;
               }
-              parameterTypes_.add(bs);
+              parameterType_.add(bs);
               break;
             }
             case 58: {
@@ -282,7 +261,7 @@ public final class RequestPb {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000020) != 0)) {
-          parameterTypes_ = parameterTypes_.getUnmodifiableView();
+          parameterType_ = parameterType_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -318,14 +297,12 @@ public final class RequestPb {
     private volatile Object hirpcVersion_;
     /**
      * <code>required string hirpcVersion = 1;</code>
-     * @return Whether the hirpcVersion field is set.
      */
     public boolean hasHirpcVersion() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>required string hirpcVersion = 1;</code>
-     * @return The hirpcVersion.
      */
     public String getHirpcVersion() {
       Object ref = hirpcVersion_;
@@ -343,7 +320,6 @@ public final class RequestPb {
     }
     /**
      * <code>required string hirpcVersion = 1;</code>
-     * @return The bytes for hirpcVersion.
      */
     public com.google.protobuf.ByteString
         getHirpcVersionBytes() {
@@ -363,14 +339,12 @@ public final class RequestPb {
     private volatile Object servicePath_;
     /**
      * <code>required string servicePath = 2;</code>
-     * @return Whether the servicePath field is set.
      */
     public boolean hasServicePath() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>required string servicePath = 2;</code>
-     * @return The servicePath.
      */
     public String getServicePath() {
       Object ref = servicePath_;
@@ -388,7 +362,6 @@ public final class RequestPb {
     }
     /**
      * <code>required string servicePath = 2;</code>
-     * @return The bytes for servicePath.
      */
     public com.google.protobuf.ByteString
         getServicePathBytes() {
@@ -408,14 +381,12 @@ public final class RequestPb {
     private volatile Object serviceName_;
     /**
      * <code>required string serviceName = 3;</code>
-     * @return Whether the serviceName field is set.
      */
     public boolean hasServiceName() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>required string serviceName = 3;</code>
-     * @return The serviceName.
      */
     public String getServiceName() {
       Object ref = serviceName_;
@@ -433,7 +404,6 @@ public final class RequestPb {
     }
     /**
      * <code>required string serviceName = 3;</code>
-     * @return The bytes for serviceName.
      */
     public com.google.protobuf.ByteString
         getServiceNameBytes() {
@@ -453,14 +423,12 @@ public final class RequestPb {
     private volatile Object serviceVersion_;
     /**
      * <code>optional string serviceVersion = 4;</code>
-     * @return Whether the serviceVersion field is set.
      */
     public boolean hasServiceVersion() {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
      * <code>optional string serviceVersion = 4;</code>
-     * @return The serviceVersion.
      */
     public String getServiceVersion() {
       Object ref = serviceVersion_;
@@ -478,7 +446,6 @@ public final class RequestPb {
     }
     /**
      * <code>optional string serviceVersion = 4;</code>
-     * @return The bytes for serviceVersion.
      */
     public com.google.protobuf.ByteString
         getServiceVersionBytes() {
@@ -570,53 +537,45 @@ public final class RequestPb {
       return map.get(key);
     }
 
-    public static final int PARAMETERTYPES_FIELD_NUMBER = 6;
-    private com.google.protobuf.LazyStringList parameterTypes_;
+    public static final int PARAMETERTYPE_FIELD_NUMBER = 6;
+    private com.google.protobuf.LazyStringList parameterType_;
     /**
-     * <code>repeated string parameterTypes = 6;</code>
-     * @return A list containing the parameterTypes.
+     * <code>repeated string parameterType = 6;</code>
      */
     public com.google.protobuf.ProtocolStringList
-        getParameterTypesList() {
-      return parameterTypes_;
+        getParameterTypeList() {
+      return parameterType_;
     }
     /**
-     * <code>repeated string parameterTypes = 6;</code>
-     * @return The count of parameterTypes.
+     * <code>repeated string parameterType = 6;</code>
      */
-    public int getParameterTypesCount() {
-      return parameterTypes_.size();
+    public int getParameterTypeCount() {
+      return parameterType_.size();
     }
     /**
-     * <code>repeated string parameterTypes = 6;</code>
-     * @param index The index of the element to return.
-     * @return The parameterTypes at the given index.
+     * <code>repeated string parameterType = 6;</code>
      */
-    public String getParameterTypes(int index) {
-      return parameterTypes_.get(index);
+    public String getParameterType(int index) {
+      return parameterType_.get(index);
     }
     /**
-     * <code>repeated string parameterTypes = 6;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the parameterTypes at the given index.
+     * <code>repeated string parameterType = 6;</code>
      */
     public com.google.protobuf.ByteString
-        getParameterTypesBytes(int index) {
-      return parameterTypes_.getByteString(index);
+        getParameterTypeBytes(int index) {
+      return parameterType_.getByteString(index);
     }
 
     public static final int DATA_FIELD_NUMBER = 7;
     private volatile Object data_;
     /**
      * <code>optional string data = 7;</code>
-     * @return Whether the data field is set.
      */
     public boolean hasData() {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <code>optional string data = 7;</code>
-     * @return The data.
      */
     public String getData() {
       Object ref = data_;
@@ -634,7 +593,6 @@ public final class RequestPb {
     }
     /**
      * <code>optional string data = 7;</code>
-     * @return The bytes for data.
      */
     public com.google.protobuf.ByteString
         getDataBytes() {
@@ -694,8 +652,8 @@ public final class RequestPb {
           internalGetHeader(),
           HeaderDefaultEntryHolder.defaultEntry,
           5);
-      for (int i = 0; i < parameterTypes_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, parameterTypes_.getRaw(i));
+      for (int i = 0; i < parameterType_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, parameterType_.getRaw(i));
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, data_);
@@ -733,11 +691,11 @@ public final class RequestPb {
       }
       {
         int dataSize = 0;
-        for (int i = 0; i < parameterTypes_.size(); i++) {
-          dataSize += computeStringSizeNoTag(parameterTypes_.getRaw(i));
+        for (int i = 0; i < parameterType_.size(); i++) {
+          dataSize += computeStringSizeNoTag(parameterType_.getRaw(i));
         }
         size += dataSize;
-        size += 1 * getParameterTypesList().size();
+        size += 1 * getParameterTypeList().size();
       }
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, data_);
@@ -779,8 +737,8 @@ public final class RequestPb {
       }
       if (!internalGetHeader().equals(
           other.internalGetHeader())) return false;
-      if (!getParameterTypesList()
-          .equals(other.getParameterTypesList())) return false;
+      if (!getParameterTypeList()
+          .equals(other.getParameterTypeList())) return false;
       if (hasData() != other.hasData()) return false;
       if (hasData()) {
         if (!getData()
@@ -817,9 +775,9 @@ public final class RequestPb {
         hash = (37 * hash) + HEADER_FIELD_NUMBER;
         hash = (53 * hash) + internalGetHeader().hashCode();
       }
-      if (getParameterTypesCount() > 0) {
-        hash = (37 * hash) + PARAMETERTYPES_FIELD_NUMBER;
-        hash = (53 * hash) + getParameterTypesList().hashCode();
+      if (getParameterTypeCount() > 0) {
+        hash = (37 * hash) + PARAMETERTYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getParameterTypeList().hashCode();
       }
       if (hasData()) {
         hash = (37 * hash) + DATA_FIELD_NUMBER;
@@ -989,7 +947,7 @@ public final class RequestPb {
         serviceVersion_ = "";
         bitField0_ = (bitField0_ & ~0x00000008);
         internalGetMutableHeader().clear();
-        parameterTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        parameterType_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000020);
         data_ = "";
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -1040,10 +998,10 @@ public final class RequestPb {
         result.header_ = internalGetHeader();
         result.header_.makeImmutable();
         if (((bitField0_ & 0x00000020) != 0)) {
-          parameterTypes_ = parameterTypes_.getUnmodifiableView();
+          parameterType_ = parameterType_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000020);
         }
-        result.parameterTypes_ = parameterTypes_;
+        result.parameterType_ = parameterType_;
         if (((from_bitField0_ & 0x00000040) != 0)) {
           to_bitField0_ |= 0x00000010;
         }
@@ -1119,13 +1077,13 @@ public final class RequestPb {
         }
         internalGetMutableHeader().mergeFrom(
             other.internalGetHeader());
-        if (!other.parameterTypes_.isEmpty()) {
-          if (parameterTypes_.isEmpty()) {
-            parameterTypes_ = other.parameterTypes_;
+        if (!other.parameterType_.isEmpty()) {
+          if (parameterType_.isEmpty()) {
+            parameterType_ = other.parameterType_;
             bitField0_ = (bitField0_ & ~0x00000020);
           } else {
-            ensureParameterTypesIsMutable();
-            parameterTypes_.addAll(other.parameterTypes_);
+            ensureParameterTypeIsMutable();
+            parameterType_.addAll(other.parameterType_);
           }
           onChanged();
         }
@@ -1176,14 +1134,12 @@ public final class RequestPb {
       private Object hirpcVersion_ = "";
       /**
        * <code>required string hirpcVersion = 1;</code>
-       * @return Whether the hirpcVersion field is set.
        */
       public boolean hasHirpcVersion() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>required string hirpcVersion = 1;</code>
-       * @return The hirpcVersion.
        */
       public String getHirpcVersion() {
         Object ref = hirpcVersion_;
@@ -1201,7 +1157,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string hirpcVersion = 1;</code>
-       * @return The bytes for hirpcVersion.
        */
       public com.google.protobuf.ByteString
           getHirpcVersionBytes() {
@@ -1218,8 +1173,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string hirpcVersion = 1;</code>
-       * @param value The hirpcVersion to set.
-       * @return This builder for chaining.
        */
       public Builder setHirpcVersion(
           String value) {
@@ -1233,7 +1186,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string hirpcVersion = 1;</code>
-       * @return This builder for chaining.
        */
       public Builder clearHirpcVersion() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -1243,8 +1195,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string hirpcVersion = 1;</code>
-       * @param value The bytes for hirpcVersion to set.
-       * @return This builder for chaining.
        */
       public Builder setHirpcVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -1260,14 +1210,12 @@ public final class RequestPb {
       private Object servicePath_ = "";
       /**
        * <code>required string servicePath = 2;</code>
-       * @return Whether the servicePath field is set.
        */
       public boolean hasServicePath() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>required string servicePath = 2;</code>
-       * @return The servicePath.
        */
       public String getServicePath() {
         Object ref = servicePath_;
@@ -1285,7 +1233,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string servicePath = 2;</code>
-       * @return The bytes for servicePath.
        */
       public com.google.protobuf.ByteString
           getServicePathBytes() {
@@ -1302,8 +1249,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string servicePath = 2;</code>
-       * @param value The servicePath to set.
-       * @return This builder for chaining.
        */
       public Builder setServicePath(
           String value) {
@@ -1317,7 +1262,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string servicePath = 2;</code>
-       * @return This builder for chaining.
        */
       public Builder clearServicePath() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -1327,8 +1271,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string servicePath = 2;</code>
-       * @param value The bytes for servicePath to set.
-       * @return This builder for chaining.
        */
       public Builder setServicePathBytes(
           com.google.protobuf.ByteString value) {
@@ -1344,14 +1286,12 @@ public final class RequestPb {
       private Object serviceName_ = "";
       /**
        * <code>required string serviceName = 3;</code>
-       * @return Whether the serviceName field is set.
        */
       public boolean hasServiceName() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>required string serviceName = 3;</code>
-       * @return The serviceName.
        */
       public String getServiceName() {
         Object ref = serviceName_;
@@ -1369,7 +1309,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string serviceName = 3;</code>
-       * @return The bytes for serviceName.
        */
       public com.google.protobuf.ByteString
           getServiceNameBytes() {
@@ -1386,8 +1325,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string serviceName = 3;</code>
-       * @param value The serviceName to set.
-       * @return This builder for chaining.
        */
       public Builder setServiceName(
           String value) {
@@ -1401,7 +1338,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string serviceName = 3;</code>
-       * @return This builder for chaining.
        */
       public Builder clearServiceName() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -1411,8 +1347,6 @@ public final class RequestPb {
       }
       /**
        * <code>required string serviceName = 3;</code>
-       * @param value The bytes for serviceName to set.
-       * @return This builder for chaining.
        */
       public Builder setServiceNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1428,14 +1362,12 @@ public final class RequestPb {
       private Object serviceVersion_ = "";
       /**
        * <code>optional string serviceVersion = 4;</code>
-       * @return Whether the serviceVersion field is set.
        */
       public boolean hasServiceVersion() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>optional string serviceVersion = 4;</code>
-       * @return The serviceVersion.
        */
       public String getServiceVersion() {
         Object ref = serviceVersion_;
@@ -1453,7 +1385,6 @@ public final class RequestPb {
       }
       /**
        * <code>optional string serviceVersion = 4;</code>
-       * @return The bytes for serviceVersion.
        */
       public com.google.protobuf.ByteString
           getServiceVersionBytes() {
@@ -1470,8 +1401,6 @@ public final class RequestPb {
       }
       /**
        * <code>optional string serviceVersion = 4;</code>
-       * @param value The serviceVersion to set.
-       * @return This builder for chaining.
        */
       public Builder setServiceVersion(
           String value) {
@@ -1485,7 +1414,6 @@ public final class RequestPb {
       }
       /**
        * <code>optional string serviceVersion = 4;</code>
-       * @return This builder for chaining.
        */
       public Builder clearServiceVersion() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -1495,8 +1423,6 @@ public final class RequestPb {
       }
       /**
        * <code>optional string serviceVersion = 4;</code>
-       * @param value The bytes for serviceVersion to set.
-       * @return This builder for chaining.
        */
       public Builder setServiceVersionBytes(
           com.google.protobuf.ByteString value) {
@@ -1632,111 +1558,95 @@ public final class RequestPb {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList parameterTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureParameterTypesIsMutable() {
+      private com.google.protobuf.LazyStringList parameterType_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureParameterTypeIsMutable() {
         if (!((bitField0_ & 0x00000020) != 0)) {
-          parameterTypes_ = new com.google.protobuf.LazyStringArrayList(parameterTypes_);
+          parameterType_ = new com.google.protobuf.LazyStringArrayList(parameterType_);
           bitField0_ |= 0x00000020;
          }
       }
       /**
-       * <code>repeated string parameterTypes = 6;</code>
-       * @return A list containing the parameterTypes.
+       * <code>repeated string parameterType = 6;</code>
        */
       public com.google.protobuf.ProtocolStringList
-          getParameterTypesList() {
-        return parameterTypes_.getUnmodifiableView();
+          getParameterTypeList() {
+        return parameterType_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string parameterTypes = 6;</code>
-       * @return The count of parameterTypes.
+       * <code>repeated string parameterType = 6;</code>
        */
-      public int getParameterTypesCount() {
-        return parameterTypes_.size();
+      public int getParameterTypeCount() {
+        return parameterType_.size();
       }
       /**
-       * <code>repeated string parameterTypes = 6;</code>
-       * @param index The index of the element to return.
-       * @return The parameterTypes at the given index.
+       * <code>repeated string parameterType = 6;</code>
        */
-      public String getParameterTypes(int index) {
-        return parameterTypes_.get(index);
+      public String getParameterType(int index) {
+        return parameterType_.get(index);
       }
       /**
-       * <code>repeated string parameterTypes = 6;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the parameterTypes at the given index.
+       * <code>repeated string parameterType = 6;</code>
        */
       public com.google.protobuf.ByteString
-          getParameterTypesBytes(int index) {
-        return parameterTypes_.getByteString(index);
+          getParameterTypeBytes(int index) {
+        return parameterType_.getByteString(index);
       }
       /**
-       * <code>repeated string parameterTypes = 6;</code>
-       * @param index The index to set the value at.
-       * @param value The parameterTypes to set.
-       * @return This builder for chaining.
+       * <code>repeated string parameterType = 6;</code>
        */
-      public Builder setParameterTypes(
+      public Builder setParameterType(
           int index, String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureParameterTypesIsMutable();
-        parameterTypes_.set(index, value);
+  ensureParameterTypeIsMutable();
+        parameterType_.set(index, value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string parameterTypes = 6;</code>
-       * @param value The parameterTypes to add.
-       * @return This builder for chaining.
+       * <code>repeated string parameterType = 6;</code>
        */
-      public Builder addParameterTypes(
+      public Builder addParameterType(
           String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureParameterTypesIsMutable();
-        parameterTypes_.add(value);
+  ensureParameterTypeIsMutable();
+        parameterType_.add(value);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string parameterTypes = 6;</code>
-       * @param values The parameterTypes to add.
-       * @return This builder for chaining.
+       * <code>repeated string parameterType = 6;</code>
        */
-      public Builder addAllParameterTypes(
+      public Builder addAllParameterType(
           Iterable<String> values) {
-        ensureParameterTypesIsMutable();
+        ensureParameterTypeIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, parameterTypes_);
+            values, parameterType_);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string parameterTypes = 6;</code>
-       * @return This builder for chaining.
+       * <code>repeated string parameterType = 6;</code>
        */
-      public Builder clearParameterTypes() {
-        parameterTypes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      public Builder clearParameterType() {
+        parameterType_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string parameterTypes = 6;</code>
-       * @param value The bytes of the parameterTypes to add.
-       * @return This builder for chaining.
+       * <code>repeated string parameterType = 6;</code>
        */
-      public Builder addParameterTypesBytes(
+      public Builder addParameterTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureParameterTypesIsMutable();
-        parameterTypes_.add(value);
+  ensureParameterTypeIsMutable();
+        parameterType_.add(value);
         onChanged();
         return this;
       }
@@ -1744,14 +1654,12 @@ public final class RequestPb {
       private Object data_ = "";
       /**
        * <code>optional string data = 7;</code>
-       * @return Whether the data field is set.
        */
       public boolean hasData() {
         return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>optional string data = 7;</code>
-       * @return The data.
        */
       public String getData() {
         Object ref = data_;
@@ -1769,7 +1677,6 @@ public final class RequestPb {
       }
       /**
        * <code>optional string data = 7;</code>
-       * @return The bytes for data.
        */
       public com.google.protobuf.ByteString
           getDataBytes() {
@@ -1786,8 +1693,6 @@ public final class RequestPb {
       }
       /**
        * <code>optional string data = 7;</code>
-       * @param value The data to set.
-       * @return This builder for chaining.
        */
       public Builder setData(
           String value) {
@@ -1801,7 +1706,6 @@ public final class RequestPb {
       }
       /**
        * <code>optional string data = 7;</code>
-       * @return This builder for chaining.
        */
       public Builder clearData() {
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -1811,8 +1715,6 @@ public final class RequestPb {
       }
       /**
        * <code>optional string data = 7;</code>
-       * @param value The bytes for data to set.
-       * @return This builder for chaining.
        */
       public Builder setDataBytes(
           com.google.protobuf.ByteString value) {
@@ -1896,15 +1798,15 @@ public final class RequestPb {
       descriptor;
   static {
     String[] descriptorData = {
-      "\n\017RequestPb.proto\022\020com.hirpc.entity\"\367\001\n\014" +
+      "\n\017RequestPb.proto\022\020com.hirpc.entity\"\366\001\n\014" +
       "RequestInner\022\024\n\014hirpcVersion\030\001 \002(\t\022\023\n\013se" +
       "rvicePath\030\002 \002(\t\022\023\n\013serviceName\030\003 \002(\t\022\026\n\016" +
       "serviceVersion\030\004 \001(\t\022:\n\006header\030\005 \003(\0132*.c" +
       "om.hirpc.entity.RequestInner.HeaderEntry" +
-      "\022\026\n\016parameterTypes\030\006 \003(\t\022\014\n\004data\030\007 \001(\t\032-" +
-      "\n\013HeaderEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(" +
-      "\t:\0028\001B(\n\033com.hirpc.protocol.protobufB\tRe" +
-      "questPb"
+      "\022\025\n\rparameterType\030\006 \003(\t\022\014\n\004data\030\007 \001(\t\032-\n" +
+      "\013HeaderEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t" +
+      ":\0028\001B(\n\033com.hirpc.protocol.protobufB\tReq" +
+      "uestPb"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1915,7 +1817,7 @@ public final class RequestPb {
     internal_static_com_hirpc_entity_RequestInner_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_hirpc_entity_RequestInner_descriptor,
-        new String[] { "HirpcVersion", "ServicePath", "ServiceName", "ServiceVersion", "Header", "ParameterTypes", "Data", });
+        new String[] { "HirpcVersion", "ServicePath", "ServiceName", "ServiceVersion", "Header", "ParameterType", "Data", });
     internal_static_com_hirpc_entity_RequestInner_HeaderEntry_descriptor =
       internal_static_com_hirpc_entity_RequestInner_descriptor.getNestedTypes().get(0);
     internal_static_com_hirpc_entity_RequestInner_HeaderEntry_fieldAccessorTable = new
