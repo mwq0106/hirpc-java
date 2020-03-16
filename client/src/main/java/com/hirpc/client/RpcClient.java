@@ -81,6 +81,7 @@ public class RpcClient {
                                     if (clientHandlers == null || clientHandlers.isEmpty()) {
                                         throw new RuntimeException("未查询到服务：" + request.getServicePath());
                                     }
+                                    //todo 这里还需要再加上匹配条件作为key?
                                     RpcClientHandler electedHandler = rpcReference.loadBalance().balancer.elect(request.getServicePath(),clientHandlers);
                                     logger.debug("选取服务节点：{}", electedHandler.getServerAddress());
 
