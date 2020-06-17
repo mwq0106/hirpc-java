@@ -13,14 +13,8 @@
         <Root level="info">
             <AppenderRef ref="Console" />
         </Root>
-        <!--<Logger name="org.springframework" level="info" additivity="false">-->
-            <!--<AppenderRef ref="File" />-->
-        <!--</Logger>-->
         <logger name="com.hirpc" level="DEBUG"/>
         <!--<logger name="com.hirpc" level="INFO"/>-->
         <Logger name="org.apache.zookeeper.ZooKeeper" level="warn"/>
-        <!--<Logger name="com.alibaba.dubbo.config.spring.beans.factory.annotation.ServiceAnnotationBeanPostProcessor" level="warn"/>-->
-        <!--<Logger name="com.alibaba.dubbo.config.AbstractConfig" level="warn"/>-->
-        <!--<Logger name="com.alibaba.dubbo.registry.zookeeper.ZookeeperRegistry" level="warn"/>-->
     </Loggers>
 </Configuration>

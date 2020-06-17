@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 import javax.annotation.Resource;
 
 /**
+ * 模拟多个服务提供方提供服务的情形，需要测试相关情形运行该类即可
  * @author mwq0106
  * @date 2019/9/26
  */
