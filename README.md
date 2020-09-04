@@ -77,6 +77,9 @@ public class DemoController {
 ## 如何基于protobuf设计一个跨语言RPC协议
 设计一个跨语言的RPC协议是实现跨语言RPC调用的重中之重，RPC本质是基于TCP长连接的一种通信传输，通信双方需要约定好相应的字节或者精确到比特协议信息。
   
+  ![image](https://github.com/mwq0106/hirpc-java/blob/master/assert/20200904113229.png)
+  
+  ![image](https://github.com/mwq0106/hirpc-java/blob/master/assert/20200904113257.png)
 协议的设计还是使用了经典的header+body格式，header是一个个约定好的字节顺序，每个字节都有自己独特的作用，body则是protobuf对象在不同语言中序列化后的字节数组，使用header+body这种方式，也能帮我们轻松解决TCP拆包与粘包的问题。
   
 每个RPC请求都会封装成为此种格式，header中会给出请求的基本信息，如魔数用于标识这是RPC协议的开始，序列化类型标识使用哪种序列化协议，消息ID用于区分不同请求，这些都是一些最基本的信息。
