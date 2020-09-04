@@ -84,6 +84,7 @@ public class DemoController {
 重点在于，我们怎么包装RPC调用当中的服务路径（对应于java中的包名+类名），服务名（对应于java中的方法名），方法参数类型，方法实参，以及返回值，并且还要考虑包装之后，还能够在各个语言当中解析出来，既然是基于protobuf实现，那么我们可以使用protobuf来做包装，将调用的一些关键信息放到protobuf中，然后序列化成二进制，到各个语言当中，先是读取header，然后根据header中的信息再读取protobuf的二进制数据，将protobuf的二进制反序列化为相应的protobuf对象，所以理论上protobuf支持的语言，我们都可以在该语言上进行RPC调用。
   
 请求包装proto文件：
+
   ![image](https://github.com/mwq0106/hirpc-java/blob/master/assert/requestProto.png)
   
 关键参数servicePath，serviceName，parameterType。每次进行RPC调用时都会生成一个相应的包装类，将服务路径，对应的其实就是各个语言中的包名+类名，装入servicePath中，调用方法名装入serviceName中，还有参数类型，这里使用了string类型的数组。在进行RPC调用时，将会通过servicePath定位到各个语言中的服务对象，这个服务对象对应于各个语言中对象，在对应的服务中使用类似于HashMap的方式存储服务对象，key值即是servicePath，value值则是服务对象。serviceName则是对象中的各个方法名。
