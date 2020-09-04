@@ -76,12 +76,20 @@ public class DemoController {
 # 核心设计
 ## 如何基于protobuf设计一个跨语言RPC协议
   设计一个跨语言的RPC协议是实现跨语言RPC调用的重中之重，RPC本质是基于TCP长连接的一种通信传输，通信双方需要约定好相应的字节或者精确到比特协议信息。
+  
   协议的设计还是使用了经典的header+body格式，header是一个个约定好的字节顺序，每个字节都有自己独特的作用，body则是protobuf对象在不同语言中序列化后的字节数组，使用header+body这种方式，也能帮我们轻松解决TCP拆包与粘包的问题。
+  
   每个RPC请求都会封装成为此种格式，header中会给出请求的基本信息，如魔数用于标识这是RPC协议的开始，序列化类型标识使用哪种序列化协议，消息ID用于区分不同请求，这些都是一些最基本的信息。
+  
   重点在于，我们怎么包装RPC调用当中的服务路径（对应于java中的包名+类名），服务名（对应于java中的方法名），方法参数类型，方法实参，以及返回值，并且还要考虑包装之后，还能够在各个语言当中解析出来，既然是基于protobuf实现，那么我们可以使用protobuf来做包装，将调用的一些关键信息放到protobuf中，然后序列化成二进制，到各个语言当中，先是读取header，然后根据header中的信息再读取protobuf的二进制数据，将protobuf的二进制反序列化为相应的protobuf对象，所以理论上protobuf支持的语言，我们都可以在该语言上进行RPC调用。
+  
   请求包装proto文件：
   ![image](https://github.com/mwq0106/hirpc-java/blob/master/assert/requestProto.png)
+  
   关键参数servicePath，serviceName，parameterType。每次进行RPC调用时都会生成一个相应的包装类，将服务路径，对应的其实就是各个语言中的包名+类名，装入servicePath中，调用方法名装入serviceName中，还有参数类型，这里使用了string类型的数组。在进行RPC调用时，将会通过servicePath定位到各个语言中的服务对象，这个服务对象对应于各个语言中对象，在对应的服务中使用类似于HashMap的方式存储服务对象，key值即是servicePath，value值则是服务对象。serviceName则是对象中的各个方法名。
+  
   parameterType则是一个字符串数组，它是实现跨语言RPC的核心设计之一，parameterType是数组是因为每次调用有可能包含多个参数，是字符串是因为我们会在各个服务中又保存一份HashMap，key值是string，来源于protobuf中的package名+ message名，所以我们要求进行RPC调用时，方法的参数以及返回值都必须要是protobuf生成的对象，并且声明了package，package+message将会用于定位相应的参数类型，value则是该参数在各个语言中的参数类型，可以根据该参数类型生成对应的参数实例，然后用于反序列化接收到的二进制数据，比如在java中就是class对象，在go中则是kind对象，我们可以根据该类型生成对应的对象实例，所以因为这个原因，在进行RPC调用时，每个参数与返回值都必须是在客户端与服务端都必须共同持有。本质上来说，我们使用这种映射解决了二进制数据转为多个protobuf对象的问题。所以我们区分了body1与body2的概念，body1是用于传输调用服务路径，方法名，方法类型。Body2则是调用时的方法实参，每个实参对应的二进制数据前面都有一个int表示当前实参的长度，我们只需按长度读取即可，并且body1中的parameterType数组也能标识出对应实参的类型，parameterType数组长度与body2的数量相等，如假设parameterType[0]是字符串tutorial.Test2.Person，我们可以去HashMap中取得java中的tutorial.Test2.Person class对象，通过该class对象生成类实例，再通过类实例去反序列化二进制数据，从而得到方法实参。通过以上body1转为request包装对象，request包装对象中又含有方法调用的参数信息，参数信息以字符串形式存储，再将字符串映射为参数类型，类型再生成对象，对象再去反序列化二进制数据的方式，解决了使用protobuf作为跨语言rpc调用的关键步骤。
+  
   总结一遍协议的解析过程，在进行一次协议解析时，首先会根据魔数标识这是一个rpc协议的开始，然后读取header中的序列化类型，消息ID等，发现是使用protobuf作为序列化方式，然后再读取body1长度，使用RequestInner类去反序列化body1中的二进制数据，得到调用的一些基本信息，然后又根据RequestInner类中的parameterType字符串数组，得到调用参数类型的信息，本地持有一个parameterType的映射表，key值是字符串，value值是对象类型，接下来读取body2的信息，先根据parameterType的第一个值，得到第一个参数的类型，然后根据该类型得到第一个参数的对象实例，然后使用这个对象实例去反序列化第一个参数的二进制数据，第一个参数的二进制数据我们使用了int+body的格式去传输，先读一个int，得到第一个参数的长度，然后再读取相应长度的数据，即可得到第一个参数的二进制数据，从而完成了第一个参数的反序列化过程，第二第三个等参数的解析也是使用类似的思想，从而完成了一次rpc协议的解析过程，并且通过这种方式，是可以做到跨语言rpc的，理论上只要protobuf支持的语言，我们都可以做rpc。
+  
   在返回响应数据的过程也是类似的原理，感兴趣的同学可以自己想一下应该怎么设计相关协议。
