@@ -50,11 +50,10 @@ public class ConsistentHashBalancer implements Balancer {
                 | ((long) (digest[1] & 0xFF) << 8)
                 | (digest[0] & 0xFF);
 
-        long truncateHashCode = hashCode & 0xffffffffL;
-        return truncateHashCode;
+        return hashCode & 0xffffffffL;
     }
 
-    public RpcClientHandler doRoute(String serviceKey, List<RpcClientHandler> handlers) {
+    private RpcClientHandler doRoute(String serviceKey, List<RpcClientHandler> handlers) {
 
         // ------A1------A2-------A3------
         // -----------J1------------------

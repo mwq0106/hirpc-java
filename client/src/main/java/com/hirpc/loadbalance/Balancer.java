@@ -11,7 +11,7 @@ import java.util.List;
 public interface Balancer {
 
     /**
-     * 从候选地址<code>candidates</code>中根据一定的负载均衡算法选出一台服务器的地址
+     * 从候选地址 candidates 中根据一定的负载均衡算法选出一台服务器的地址
      *
      * @param service 服务
      * @param candidates  服务的候选地址

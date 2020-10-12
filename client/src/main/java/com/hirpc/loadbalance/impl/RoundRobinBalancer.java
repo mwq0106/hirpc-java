@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -15,13 +16,15 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class RoundRobinBalancer implements Balancer {
 
-    private volatile Map<String, AtomicInteger> requestMap = new HashMap<>();
+    private volatile Map<String, AtomicInteger> requestMap = new ConcurrentHashMap<>();
     @Override
     public RpcClientHandler elect(String service, List<RpcClientHandler> candidates) {
-        if (!requestMap.containsKey(service)) {
+        AtomicInteger lastIndex = requestMap.get(service);
+        if (lastIndex == null) {
             requestMap.put(service, new AtomicInteger(0));
+            lastIndex = requestMap.get(service);
         }
-        int index = requestMap.get(service).getAndAdd(1) %  candidates.size();
+        int index = lastIndex.getAndAdd(1) %  candidates.size();
 
         return candidates.get(index);
     }
